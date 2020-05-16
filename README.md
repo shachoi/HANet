@@ -1,10 +1,11 @@
 ## HANet: Official Project Webpage
-HANet is an add-on module for urban-scene segmentation to exploit the structural priors existing in urban-scene. It is effective and wide applicable! This repository provides the official PyTorch implementation of the following paper:
+HANet is an add-on module for urban-scene segmentation to exploit the structural priors existing in urban-scene. It is effective and wide applicable!
 
 <p align="center">
   <img src="assets/6529-teaser.gif" />
 </p>
 
+This repository provides the official PyTorch implementation of the following paper:
 > **Cars Can’t Fly up in the Sky:** Improving Urban-Scene Segmentation via Height-driven Attention Networks<br>
 > Sungha Choi (LGE, Korea Univ.), Joanne T. Kim (LLNL, Korea Univ.), Jaegul Choo (KAIST)<br>
 > In CVPR 2020<br>
