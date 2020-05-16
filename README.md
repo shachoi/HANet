@@ -8,15 +8,18 @@ HANet is an add-on module for urban-scene segmentation to exploit the structural
 > **Cars Can’t Fly up in the Sky:** Improving Urban-Scene Segmentation via Height-driven Attention Networks<br>
 > Sungha Choi (LGE, Korea Univ.), Joanne T. Kim (LLNL, Korea Univ.), Jaegul Choo (KAIST)<br>
 > In CVPR 2020<br>
-<p align="center">
-  <img src="assets/6529-architecture.png" />
-</p>
-> **Abstracts.** *This paper exploits the intrinsic features of urban-scene images and proposes a general add-on module, called height driven attention networks (HANet), for improving semantic segmentation for urban-scene images. It emphasizes informative features or classes selectively according to the vertical position of a pixel. The pixel-wise class distributions are significantly different from each other among horizontally segmented sections in the urban-scene images. Likewise, urban-scene images have their own distinct characteristics, but most semantic segmentation networks do not reflect such unique attributes in the architecture. The proposed network architecture incorporates the capability exploiting the attributes to handle the urban scene dataset effectively. We validate the consistent performance (mIoU) increase of various semantic segmentation models on two datasets when HANet is adopted. This extensive quantitative analysis demonstrates that adding our module to existing models is easy and cost-effective. Our method achieves a new state-of-the-art performance on the Cityscapes benchmark with a large margin among ResNet-101 based segmentation models. Also, we show that the proposed model is coherent with the facts observed in the urban scene by visualizing and interpreting the attention map*<br>
 
 > Paper : https://arxiv.org/abs/2003.05128 <br>
 
+<p align="center">
+  <img src="assets/6529-architecture.png" />
+</p>
+
+> **Abstract:** *This paper exploits the intrinsic features of urban-scene images and proposes a general add-on module, called height driven attention networks (HANet), for improving semantic segmentation for urban-scene images. It emphasizes informative features or classes selectively according to the vertical position of a pixel. The pixel-wise class distributions are significantly different from each other among horizontally segmented sections in the urban-scene images. Likewise, urban-scene images have their own distinct characteristics, but most semantic segmentation networks do not reflect such unique attributes in the architecture. The proposed network architecture incorporates the capability exploiting the attributes to handle the urban scene dataset effectively. We validate the consistent performance (mIoU) increase of various semantic segmentation models on two datasets when HANet is adopted. This extensive quantitative analysis demonstrates that adding our module to existing models is easy and cost-effective. Our method achieves a new state-of-the-art performance on the Cityscapes benchmark with a large margin among ResNet-101 based segmentation models. Also, we show that the proposed model is coherent with the facts observed in the urban scene by visualizing and interpreting the attention map*<br>
+
 ## Concept Video
 Click the figure to watch the youtube video of our paper!
+
 <p align="center">
   <a href="https://www.youtube.com/watch?v=0Orj3AUfu9Y"><img src="assets/youtube_capture_p.png" alt="Youtube Video"></a><br>
 </p>
@@ -65,12 +68,18 @@ cityscapes
      └ val
      └ test
 ```
-You should modify "__C.DATASET.CITYSCAPES_DIR" in "<path_to_hanet>/config.py" according to your Cityscapes dataset path.
+You should modify the path in **"<path_to_hanet>/config.py"** according to your Cityscapes dataset path.
+
 ```
 #Cityscapes Dir Location
 __C.DATASET.CITYSCAPES_DIR = <YOUR_CITYSCAPES_PATH>
 ```
-Additionally, you can use Cityscapes coarse dataset to get best mIoU score. Please refer the training script "<path_to_hanet>/scripts/train_resnext_fr_pretrain.sh". The other training scripts don't use Cityscapes coarse dataset.
+
+Additionally, you can use Cityscapes coarse dataset to get best mIoU score.
+
+Please refer the training script **"<path_to_hanet>/scripts/train_resnext_fr_pretrain.sh"**.
+
+The other training scripts don't use Cityscapes coarse dataset.
 
 ### Pretrained Models
 #### All models trained for our paper
@@ -106,15 +115,17 @@ Otherwise, you can train HANet (based on ResNet-101) using only finely annotated
 <path_to_hanet>$ CUDA_VISIBLE_DEVICES=0,1,2,3 ./scripts/train_r101_os8_hanet.sh
 ```
 Additioanlly, we provide various training scripts like MobileNet based HANet.
-The results will be stored in "<path_to_hanet>/logs/"
+
+The results will be stored in **"<path_to_hanet>/logs/"**
 ### Inference
 ```
 <path_to_hanet>$ CUDA_VISIBLE_DEVICES=0 ./scripts/eval_r101_os8.sh <weight_file_location> <result_save_location>
 ```
-### Cityscapes Benchmark
+### Submit to Cityscapes benchmark server
 ```
 <path_to_hanet>$ CUDA_VISIBLE_DEVICES=0 ./scripts/submit_r101_os8.sh <weight_file_location> <result_save_location>
 ```
+
 ## Citation
 If you find this work useful for your research, please cite our paper:
 ```
@@ -125,6 +136,7 @@ If you find this work useful for your research, please cite our paper:
   year={2020}
 }
 ```
+
 ## Acknowledgments
 Our pytorch implementation is heavily derived from [NVIDIA segmentation](https://github.com/NVIDIA/semantic-segmentation).
 Thanks to the NVIDIA implementations.
