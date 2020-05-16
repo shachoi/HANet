@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+    # Example on Cityscapes
+     python -m torch.distributed.launch --nproc_per_node=6 train.py \
+        --dataset cityscapes \
+        --arch network.deepv3.DeepResNext101V3PlusD_HANet_OS8 \
+        --snapshot pretrained/resnext_mapillary_0.47475.pth \
+        --city_mode 'trainval' \
+        --lr_schedule poly \
+        --lr 0.01 \
+        --poly_exp 0.9 \
+        --hanet_lr 0.01 \
+        --hanet_poly_exp 0.9 \
+        --max_cu_epoch 10000 \
+        --class_uniform_pct 0.5 \
+        --class_uniform_tile 1024 \
+        --coarse_boost_classes 14,15,16,3,12,17,4 \
+        --syncbn \
+        --sgd \
+        --crop_size 864 \
+        --scale_min 0.5 \
+        --scale_max 2.0 \
+        --rrotate 0 \
+        --color_aug 0.25 \
+        --gblur \
+        --max_iter 90000 \
+        --bs_mult 2 \
+        --hanet 1 1 1 1 0 \
+        --hanet_set 3 64 3 \
+        --hanet_pos 2 1 \
+        --pos_rfactor 8 \
+        --dropout 0.1 \
+        --pos_noise 0.5 \
+        --aux_loss \
+        --cls_wt_loss \
+        --date 0101 \
+        --exp resnext_from_pretrain \
+        --ckpt ./logs/ \
+        --tb_path ./logs/
