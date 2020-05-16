@@ -95,8 +95,8 @@ To train ResNet-101 based HANet, you should download ImageNet pretrained ResNet-
 This pretrained model is from [MIT CSAIL Computer Vision Group](http://sceneparsing.csail.mit.edu/)
 
 #### Mapillary pretrained ResNext-101
-You can finetune HANet from Mapillary pretrained ResNext-101.
-Download from [this link](https://drive.google.com/file/d/1GJ4VOSiLwNuyqOgRqQoe9FbvnklI2TYe/view?usp=sharing) and put it into following directory.
+You can finetune HANet from Mapillary pretrained ResNext-101 using the training script **"<path_to_hanet>/scripts/train_resnext_fr_pretrain.sh"**.
+Download it from [this link](https://drive.google.com/file/d/1GJ4VOSiLwNuyqOgRqQoe9FbvnklI2TYe/view?usp=sharing) and put it into following directory.
 ```
 <path_to_hanet>/pretrained/resnext_mapillary_0.47475.pth
 ```
@@ -108,11 +108,11 @@ According to the specification of your gpu system, you may modify the training s
       --bs_mult NUM_BATCH_PER_SINGLE_GPU \
       ...
 ```
-You can train HANet (based on ResNet-101) using finely annotated **training and validation** set with following command.
+You can train HANet (based on ResNet-101) using **finely annotated training and validation set** with following command.
 ```
 <path_to_hanet>$ CUDA_VISIBLE_DEVICES=0,1,2,3 ./scripts/train_r101_os8_hanet_best.sh
 ```
-Otherwise, you can train HANet (based on ResNet-101) using only finely annotated **training** set with following command.
+Otherwise, you can train HANet (based on ResNet-101) using only **finely annotated training set** with following command.
 ```
 <path_to_hanet>$ CUDA_VISIBLE_DEVICES=0,1,2,3 ./scripts/train_r101_os8_hanet.sh
 ```
