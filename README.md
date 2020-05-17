@@ -114,7 +114,7 @@ You can train HANet (based on ResNet-101) using **finely annotated training and 
 ```
 Otherwise, you can train HANet (based on ResNet-101) using only **finely annotated training set** with following command.
 ```
-<path_to_hanet>$ CUDA_VISIBLE_DEVICES=0,1,2,3 ./scripts/train_r101_os8_hanet.sh
+<path_to_hanet>$ CUDA_VISIBLE_DEVICES=0,1 ./scripts/train_r101_os8_hanet.sh
 ```
 Additioanlly, we provide various training scripts like MobileNet based HANet.
 
