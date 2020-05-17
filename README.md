@@ -26,11 +26,11 @@ Click the figure to watch the youtube video of our paper!
 </p>
 
 ## Cityscapes Benchmark
-| Models | Data | mIoU | External Link |
-|:--------:|:--------:|:--------:|:--------:|
-| HANet (ResNext-101) | Fine train/val + Coarse | 83.2% | [Cityscapes benchmark](https://www.cityscapes-dataset.com/anonymous-results/?id=9a8b7333dcb66360b4f38ba00db7c84e7997f7203084bf6e92ca9bbabbc34640) |
-| HANet (ResNet-101) | Fine train/val | 82.1% | [Cityscapes benchmark](https://www.cityscapes-dataset.com/anonymous-results/?id=f96818d678c67c82449323203d144e530fb66102a5b5a101f599a96cc62458e7) |
-| HANet (ResNet-101) | Fine train | 80.9% | [Cityscapes benchmark](https://www.cityscapes-dataset.com/anonymous-results/?id=1e5e85818e439332fdae01037259706d9091be2b9fca850eb4a851805f5ed44d) |
+| Models | Data |  Crop Size | Batch Size | Output Stride | mIoU | External Link |
+|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+| HANet (ResNext-101) | Fine train/val + Coarse | 864X864 | 12 | 8 | 83.2% | [Benchmark](https://www.cityscapes-dataset.com/anonymous-results/?id=9a8b7333dcb66360b4f38ba00db7c84e7997f7203084bf6e92ca9bbabbc34640) |
+| HANet (ResNet-101) | Fine train/val |  864X864 | 12 | 8 | 82.1% | [Benchmark](https://www.cityscapes-dataset.com/anonymous-results/?id=f96818d678c67c82449323203d144e530fb66102a5b5a101f599a96cc62458e7) |
+| HANet (ResNet-101) | Fine train | 768X768 | 8 | 8 | 80.9% | [Benchmark](https://www.cityscapes-dataset.com/anonymous-results/?id=1e5e85818e439332fdae01037259706d9091be2b9fca850eb4a851805f5ed44d) |
 
 
 ## Pytorch Implementation
