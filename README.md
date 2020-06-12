@@ -10,7 +10,7 @@ This repository provides the official PyTorch implementation of the following pa
 > Sungha Choi (LGE, Korea Univ.), Joanne T. Kim (LLNL, Korea Univ.), Jaegul Choo (KAIST)<br>
 > In CVPR 2020<br>
 
-> Paper : https://arxiv.org/abs/2003.05128 <br>
+> Paper : [[pdf]](http://openaccess.thecvf.com/content_CVPR_2020/papers/Choi_Cars_Cant_Fly_Up_in_the_Sky_Improving_Urban-Scene_Segmentation_CVPR_2020_paper.pdf) [[supp]](http://openaccess.thecvf.com/content_CVPR_2020/supplemental/Choi_Cars_Cant_Fly_CVPR_2020_supplemental.pdf) <br>
 
 <p align="center">
   <img src="assets/6529-architecture.png" />
