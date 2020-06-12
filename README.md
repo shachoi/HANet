@@ -131,11 +131,12 @@ The results will be stored in **"<path_to_hanet>/logs/"**
 ## Citation
 If you find this work useful for your research, please cite our paper:
 ```
-@inproceedings{choi2020cars,
-  title={Cars Can't Fly up in the Sky: Improving Urban-Scene Segmentation via Height-driven Attention Networks},
-  author={Choi, Sungha and Kim, Joanne T and Choo, Jaegul},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  year={2020}
+@InProceedings{Choi_2020_CVPR,
+author = {Choi, Sungha and Kim, Joanne T. and Choo, Jaegul},
+title = {Cars Can't Fly Up in the Sky: Improving Urban-Scene Segmentation via Height-Driven Attention Networks},
+booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2020}
 }
 ```
 
