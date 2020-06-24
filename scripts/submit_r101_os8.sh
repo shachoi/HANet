@@ -12,7 +12,7 @@ python -m torch.distributed.launch --nproc_per_node=1 eval.py \
     --snapshot ${1} \
     --pos_rfactor 8 \
     --hanet 1 1 1 1 0 \
-    --hanet_set 3 32 3 \
+    --hanet_set 3 64 3 \
     --hanet_pos 2 1 \
     --dropout 0.3 \
     --aux_loss \
