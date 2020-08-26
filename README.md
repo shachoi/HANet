@@ -116,6 +116,8 @@ Otherwise, you can train HANet (based on ResNet-101) using only **finely annotat
 ```
 <path_to_hanet>$ CUDA_VISIBLE_DEVICES=0,1 ./scripts/train_r101_os8_hanet.sh
 ```
+To run the script "train_r101_os8_hanet.sh", two Titan RTX GPUs (2 X 24GB GPU Memory) are required.
+
 Additioanlly, we provide various training scripts like MobileNet based HANet.
 
 The results will be stored in **"<path_to_hanet>/logs/"**
